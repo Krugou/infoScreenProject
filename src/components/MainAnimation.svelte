@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { onMount, onDestroy } from 'svelte';
-	import { browser } from '$app/environment';
 
 	let container: HTMLDivElement;
 	let scene: any;
@@ -35,7 +34,7 @@
 		const material = new THREE.MeshNormalMaterial();
 
 		// Create three cubes and position them
-		for (let i = 0; i < 4; i++) {
+		for (let i = 0; i < 3; i++) {
 			const cube = new THREE.Mesh(geometry, material);
 			cube.position.x = (i - 1) * 2.5; // Space them 2.5 units apart
 			scene.add(cube);
@@ -55,7 +54,6 @@
 	}
 
 	function animate() {
-		if (!browser) return;
 		animationFrameId = requestAnimationFrame(animate);
 		if (isAnimating) {
 			cubes.forEach((cube) => {
@@ -75,21 +73,17 @@
 	}
 
 	onMount(() => {
-		if (browser) {
-			initThree();
-			window.addEventListener('resize', handleResize);
-		}
+		initThree();
+		window.addEventListener('resize', handleResize);
 	});
 
 	onDestroy(() => {
-		if (browser) {
-			window.removeEventListener('resize', handleResize);
-			if (renderer) {
-				renderer.dispose();
-			}
-			if (animationFrameId) {
-				cancelAnimationFrame(animationFrameId);
-			}
+		window.removeEventListener('resize', handleResize);
+		if (renderer) {
+			renderer.dispose();
+		}
+		if (animationFrameId) {
+			cancelAnimationFrame(animationFrameId);
 		}
 	});
 </script>
