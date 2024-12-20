@@ -8,9 +8,9 @@ const LOCALES = {
 // Helper to load locale files
 async function loadLocaleData(locale: string) {
 	try {
-		// @ts-expect-error - Vite types are not up-to-date
 		const response = await fetch(
-			process.env.NODE_ENV === 'production' ? LOCALES[locale] : `/locales/${locale}.json`
+			// @ts-expect-error - Vite types are not up-to-date
+			process.env.NODE_ENV === 'production' ? LOCALES[locale] : `/src/locales/${locale}.json`
 		);
 		const data = await response.json();
 		return data;
