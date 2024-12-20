@@ -1,0 +1,16 @@
+{
+	"header": {
+		"title": "Metropolia info screen - Svenska",
+		"links": {
+			"home": "Hem",
+			"about": "Om oss",
+			"contact": "Kontakt"
+		}
+	},
+	"footer": "&copy; {year} Metropolia. Alla rättigheter förbehållna.",
+	"languages": {
+		"en": "Engelska",
+		"fi": "Finska",
+		"swe": "Svenska"
+	}
+}

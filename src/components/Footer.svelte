@@ -3,6 +3,6 @@
 	const year = new Date().getFullYear();
 </script>
 
-<footer class="p-4 text-center">
-	<p>{@html $t('footer', { values: { year } })}</p>
-</footer>
+<div class="bg-white p-4 text-center">
+	<p>{@html $t('footer')}</p>
+</div>

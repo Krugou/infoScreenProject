@@ -1,8 +1,9 @@
 import { register, init, getLocaleFromNavigator, waitLocale } from 'svelte-i18n';
 
 const LOCALES = {
-	en: '/locales/en.json',
-	fi: '/locales/fi.json'
+    en: '/locales/en.json',
+    fi: '/locales/fi.json',
+    swe: '/locales/swe.json'
 };
 
 // Helper to load locale files
@@ -13,7 +14,7 @@ async function loadLocaleData(locale: string) {
 			process.env.NODE_ENV === 'production'
 				? // @ts-expect-error - Vite types are not up-to-date
 					`${LOCALES[locale]}`
-				: `/src/static/locales/${locale}.json`
+				: `/locales/${locale}.json`
 		);
 		const data = await response.json();
 		return data;

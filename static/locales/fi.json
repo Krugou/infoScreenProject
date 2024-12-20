@@ -1,8 +1,17 @@
 {
-	"title": "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
-	"footer": "&copy; {year} Metropolia. Kaikki oikeudet pidätetään.",
-	"languages": {
-		"en": "Englanti",
-		"fi": "Suomi"
-	}
+  "header": {
+    "title": "Metropolia info screen - Suomi",
+    "links": {
+      "home": "Etusivu",
+      "about": "Tietoa",
+      "contact": "Yhteystiedot"
+    }
+  },
+  "footer": "&copy; {year} Metropolia. Kaikki oikeudet pidätetään.",
+  "languages": {
+    "en": "Englanti",
+    "fi": "Suomi",
+    "swe": "Ruotsi"
+  },
+  "select_language": "Valitse kieli"
 }

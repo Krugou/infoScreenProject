@@ -1,8 +1,17 @@
 {
-  "title": "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+  "header": {
+    "title": "Metropolia info screen - English",
+    "links": {
+      "home": "Home",
+      "about": "About",
+      "contact": "Contact"
+    }
+  },
   "footer": "&copy; {year} Metropolia. All rights reserved.",
   "languages": {
     "en": "English",
-    "fi": "Finnish"
-  }
+    "fi": "Finnish",
+    "swe": "Swedish"
+  },
+  "select_language": "Select language"
 }
