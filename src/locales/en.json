@@ -1,0 +1,8 @@
+{
+  "title": "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+  "footer": "&copy; {year} Metropolia. All rights reserved.",
+  "languages": {
+    "en": "English",
+    "fi": "Finnish"
+  }
+}
