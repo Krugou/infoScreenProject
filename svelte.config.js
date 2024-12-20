@@ -13,7 +13,7 @@ const config = {
 			strict: false
 		}),
 		paths: {
-			base: process.env.NODE_ENV === 'production' ? '/infoScreenProject/' : ''
+			base: process.env.NODE_ENV === 'production' ? '/infoScreenProject' : ''
 		}
 	}
 };
