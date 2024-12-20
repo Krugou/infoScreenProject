@@ -1,8 +1,8 @@
 import { register, init, getLocaleFromNavigator, waitLocale } from 'svelte-i18n';
 
 const LOCALES = {
-	en: 'infoScreenProject/locales/en.json',
-	fi: 'infoScreenProject/locales/fi.json'
+	en: '/locales/en.json',
+	fi: '/locales/fi.json'
 };
 
 // Helper to load locale files
