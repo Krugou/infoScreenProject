@@ -29,11 +29,13 @@ Object.keys(LOCALES).forEach((locale) => {
 	register(locale, () => loadLocaleData(locale));
 });
 
-// Initialize i18n
+// Initialize i18n with synchronous locale setting
 init({
 	fallbackLocale: 'en',
-	initialLocale: getLocaleFromNavigator()
+	initialLocale: getLocaleFromNavigator() || 'en' // Ensure we always have a locale
 });
 
-// Export waitLocale to ensure translations are loaded
+// Wait for locale to be loaded before exposing waitLocale
+await waitLocale();
+
 export { waitLocale };
